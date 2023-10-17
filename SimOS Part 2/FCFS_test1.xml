@@ -1,0 +1,68 @@
+<simulation>
+	<log>console</log> <!-- file || console -->
+	<scheduler>
+		<name>FCFS</name> <!-- FCFS, SJR, SRTF, PRIORITY, RR -->
+		<quantum></quantum> <!-- used only for RR -->
+	</scheduler>
+	<process>
+		<id>p1-5</id>
+		<arrival>5</arrival>
+		<instructions>
+			<instruction>CCC8</instruction>
+			<instruction>CCC09</instruction>
+		</instructions>
+	</process>
+	<process>
+		<id>p2-4</id>
+		<arrival>4</arrival>
+		<instructions>
+			<instruction>CCC1</instruction>
+			<instruction>CCC07</instruction>
+		</instructions>
+	</process>
+	<process>
+		<id>p3-0</id>
+		<arrival>0</arrival>
+		<instructions>
+			<instruction>CCC2</instruction>
+			<instruction>CCC09</instruction>
+			<instruction>CCC01</instruction>
+			<instruction>MEMA19</instruction>
+			<instruction>DEVR1</instruction>
+			<instruction>DEVW1</instruction>
+			<instruction>MEMF9</instruction>
+		</instructions>
+	</process>
+	<process>
+		<id>p4-4</id>
+		<arrival>4</arrival>
+		<instructions>
+			<instruction>CCC2</instruction>
+			<instruction>CCC08</instruction>
+		</instructions>
+	</process>
+	<process>
+		<id>p5-5</id>
+		<arrival>5</arrival>
+		<instructions>
+			<instruction>CCC3</instruction>
+			<instruction>CCC06</instruction>
+		</instructions>
+	</process>
+	<process>
+		<id>p6-0</id>
+		<arrival>0</arrival>
+		<instructions>
+			<instruction>CCC4</instruction>
+			<instruction>CCC05</instruction>
+		</instructions>
+	</process>
+	<!-- 
+	p3-0	arrival=0	totalExecuteTime=16	totalWaitTime=0	turnaroundTime=16
+	P6-0	arrival=0	totalExecuteTime=9	totalWaitTime=16	turnaroundTime=25
+	p2-4	arrival=4	totalExecuteTime=8	totalWaitTime=21	turnaroundTime=29
+	p4-4	arrival=4	totalExecuteTime=10	totalWaitTime=29	turnaroundTime=39
+	p1-5	arrival=5	totalExecuteTime=17	totalWaitTime=38	turnaroundTime=55
+	p5-5	arrival=5	totalExecuteTime=9	totalWaitTime=55	turnaroundTime=64
+	-->
+</simulation>
